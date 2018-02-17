@@ -153,7 +153,7 @@ def train(hidden_dim = 200, learning_rate = 1e-4, regularization = 1e-2, trainin
 
     print 'Training started...\n'
     
-    with sv.managed_session(config = tf.ConfigProto(allow_soft_placement = True)) as sess:
+    with sv.managed_session() as sess:
         
         for epoch in range(training_epochs):
             
@@ -214,7 +214,7 @@ def train(hidden_dim = 200, learning_rate = 1e-4, regularization = 1e-2, trainin
                 last_improvement = epoch
                 best_validation_accuracy = acc
                 gs = sess.run(nn.global_step)
-                sv.saver.save(sess, 'logs/model_gs', global_step=gs)
+                sv.saver.save(sess, 'logs/model_gs', global_step = gs)
                 
             if epoch - last_improvement > patience:
                 print"Early stopping ..."
@@ -327,7 +327,7 @@ def main():
     
     hidden_dim = 200
     regularization = 1e-2
-    training_epochs = 10
+    training_epochs = 50
     learning_rate = 1e-4
     tr_val_split = 0.7
     
