@@ -1,3 +1,0 @@
-Accuracy achieved: 
-Training set: 84.78%
-Test set: 83.06%
