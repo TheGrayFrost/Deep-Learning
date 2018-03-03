@@ -1,0 +1,6 @@
+model_checkpoint_path: "model_gs-21840"
+all_model_checkpoint_paths: "model_gs-14280"
+all_model_checkpoint_paths: "model_gs-14700"
+all_model_checkpoint_paths: "model_gs-19320"
+all_model_checkpoint_paths: "model_gs-19740"
+all_model_checkpoint_paths: "model_gs-21840"
